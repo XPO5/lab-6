@@ -1,4 +1,9 @@
-def printOptions():
+'''
+Brian Santillan
+Partner: Elias Sandoval
+'''
+
+def printOptions(): #function to print menu options and get user input
     while True:
         print("Menu\n-------------\n1.Encode\n2.Decode\n3.Quit\n")
         option = int(input("Please enter an option: "))
@@ -7,7 +12,7 @@ def printOptions():
         else:
             print("Invalid Input!\nPlease enter an integer value between 1 and 3")
 
-def encodePassword(password):
+def encodePassword(password): #function to encode the password
     newPassword = ""
     for digit in password:
         newDigit = int(digit) + 3
@@ -15,7 +20,7 @@ def encodePassword(password):
     
     return newPassword
 
-def decodePassword(password):
+def decodePassword(password): #function to decode the password (made by Elias)
     newPassword = ""
     for digit in password:
         newDigit = int(digit) - 3
@@ -24,7 +29,7 @@ def decodePassword(password):
     return newPassword
 
 
-def main():
+def main(): 
     while True:
         option = printOptions()
         if option == 1:
