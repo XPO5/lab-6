@@ -15,6 +15,14 @@ def encodePassword(password):
     
     return newPassword
 
+def decodePassword(password):
+    newPassword = ""
+    for digit in password:
+        newDigit = int(digit) - 3
+        newPassword += str(newDigit)
+
+    return newPassword
+
 
 def main():
     while True:
